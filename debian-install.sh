@@ -1,4 +1,5 @@
 sudo apt install dmenu xclip maim playerctl kitty wmctrl xdotool imagemagick bc
+cd
 git clone https://codeberg.org/wh1tepearl/vxwm.git
 cd vxwm
 rm -rf config.h
