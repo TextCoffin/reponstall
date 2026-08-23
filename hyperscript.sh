@@ -1,5 +1,5 @@
 #!/bin/bash 
-# script ver 1.0r
+# script ver 1.2br
 
 #check directory
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -16,7 +16,7 @@ if [ -f /etc/os-release ]; then
                 echo "starting arch installation"
 		bash "$SCRIPT_DIR/arch_stall.sh"
                 ;;
-		opensuse|suse)
+		opensuse*|suse)
 		echo "starting opensuse installation"
 		bash "$SCRIPT_DIR/opensuse_stall.sh"
 		;;
