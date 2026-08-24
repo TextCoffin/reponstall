@@ -18,6 +18,7 @@ git clone https://codeberg.org/wh1tepearl/vcompmgr.git
 cd vcompmgr/
 make
 sudo make install
+sudo zypper install bc
 	;;
   [nN] )
     echo "y"
@@ -28,4 +29,4 @@ sudo make install
     ;;
 esac
 #program for work keybinds
-sudo zypper install dmenu xclip maim playerctl kitty wmctrl xdotool imagemagick bc
+sudo zypper install dmenu xclip maim playerctl kitty wmctrl xdotool imagemagick
