@@ -28,4 +28,4 @@ sudo pacman -S bc
 	;;
 esac
 #program for work keybinds
-sudo pacman -S dmenu xclip maim playerctl kitty wmctrl xdotool imagemagick bc
+sudo pacman -S dmenu xclip maim playerctl kitty wmctrl xdotool imagemagick
