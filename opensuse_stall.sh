@@ -9,7 +9,7 @@ rm -rf ~/vxwm/vxwm-keybinds-config
 sudo make clean install
 echo "keybinds for vxwm installed succsessful!"
 
-read -p "do you want vcompmgr? (y/n): " answer
+read -p "do you want to install vcompmgr? (y/n): " answer
 
 case "$answer" in
   [yY] )
@@ -21,7 +21,7 @@ sudo make install
 sudo zypper install bc
 	;;
   [nN] )
-    echo "y"
+    echo "n"
     exit 0
     ;;
   * )
