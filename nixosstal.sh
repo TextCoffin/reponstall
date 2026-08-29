@@ -21,6 +21,7 @@ printf '0r /tmp/temp.txt\nw\nq' | nix-shell -p ed --run  'ed -s /etc/nixos/confi
 rm /tmp/temp.txt
 
 # Paste 'hash' from hash.txt in configuration.nix ( DON'T WORK NOW! )
+# FIX THIS F#CKING SHIT! ↓↓↓
 awk -v r="$(cat /tmp/hash.txt)" '{gsub(/"00000000000000000000000000000000";/, r)}1' /etc/nixos/configuration.nix > tmp && mv tmp /etc/nixos/configuration.nix
 
 # Delete trash file /tmp/hash.txt
