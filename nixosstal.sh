@@ -3,7 +3,7 @@
 # Find hash for vxwm and paste it in hash.txt
 nix --extra-experimental-features nix-command --extra-experimental-features flakes run nixpkgs#nix-prefetch-git -- --url https://codeberg.org/wh1tepearl/vxwm.git --rev refs/heads/main 2>&1 | grep -oP 'hash: \K.*' > /tmp/hash.txt
 
-# Delete 1-5 and 7th lines in /etc/nixos/configuration.nix
+# Delete 1-5th and 7th lines in /etc/nixos/configuration.nix
 sed -i '1d' /etc/nixos/configuration.nix
 sed -i '2d' /etc/nixos/configuration.nix
 sed -i '3d' /etc/nixos/configuration.nix
