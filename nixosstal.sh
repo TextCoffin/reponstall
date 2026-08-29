@@ -11,7 +11,7 @@ sed -i '4d' /etc/nixos/configuration.nix
 sed -i '5d' /etc/nixos/configuration.nix
 sed -i '7d' /etc/nixos/configuration.nix
 
-# Copying vstavka.txt in /tmp/temp.txt
+# Copying vstavka.txt and paste it in /tmp/temp.txt
 curl -s -o /tmp/temp.txt https://raw.githubusercontent.com/prizduk/vxwm-on-NixOS/refs/heads/main/vstavka.txt
 
 # Paste vstavka.txt at the beginning of the configuration.nix
