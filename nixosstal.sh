@@ -6,7 +6,6 @@ sed -i '2d' /etc/nixos/configuration.nix
 sed -i '3d' /etc/nixos/configuration.nix
 sed -i '4d' /etc/nixos/configuration.nix
 sed -i '5d' /etc/nixos/configuration.nix
-sed -i '6d' /etc/nixos/configuration.nix
 sed -i '7d' /etc/nixos/configuration.nix
 curl -s -o /tmp/temp.txt https://raw.githubusercontent.com/prizduk/vxwm-on-NixOS/refs/heads/main/vstavka.txt
 printf '0r /tmp/temp.txt\nw\nq' | nix-shell -p ed --run  'ed -s /etc/nixos/configuration.nix'
