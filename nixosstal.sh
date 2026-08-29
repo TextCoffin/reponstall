@@ -13,4 +13,4 @@ printf '0r /tmp/temp.txt\nw\nq' | nix-shell -p ed --run  'ed -s /etc/nixos/confi
 rm /tmp/temp.txt
 awk -v r="$(cat /tmp/hash.txt)" '{gsub(/"00000000000000000000000000000000";/, r)}1' /etc/nixos/configuration.nix > tmp && mv tmp /etc/nixos/configuration.nix
 rm /tmp/hash.txt
-echo "run 'nixos-rebuild switch' and then copy/paste expected hash into "hash: "sha256-";", and run 'nixos-rebuild' again"
+echo "Run 'nixos-rebuild switch' and then copy/paste expected hash into "hash: "sha256-";", and run 'nixos-rebuild' again"
