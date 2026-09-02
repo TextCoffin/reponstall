@@ -1,4 +1,14 @@
- #!/bin/bash
+#!/bin/bash
+
+# LITERALLY CHECK do you have vxwm
+if grep -q "pname = "vxwm";" /etc/nixos/configuration.nix; then
+   echo "you already have vxwm" || exit 1
+else
+   echo "you don't have vxwm ._."
+fi
+
+# idk не придумал, придумайте чето тут ↓↓↓
+
 
 # Find hash for vxwm and paste it in hash.txt
 nix --extra-experimental-features nix-command --extra-experimental-features flakes run nixpkgs#nix-prefetch-git -- --url https://codeberg.org/wh1tepearl/vxwm.git --rev refs/heads/main 2>&1 | grep -oP 'hash: \K.*' > /tmp/hash.txt
