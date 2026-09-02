@@ -30,10 +30,6 @@ printf '0r /tmp/temp.txt\nw\nq' | nix-shell -p ed --run  'ed -s /etc/nixos/confi
 # Delete trash file /tmp/temp.txt
 rm /tmp/temp.txt
 
-# Paste 'hash' from hash.txt in configuration.nix ( DON'T WORK NOW! )
-# FIX THIS F#CKING SHIT! ↓↓↓
-perl -pi -e 'BEGIN{local $/; open(F,"/tmp/hash.txt"); $r=<F>; chomp $r} s/"00000000000000000000000000000000";/$r/g' /etc/nixos/configuration.nix
-
 # Delete trash file /tmp/hash.txt
 rm /tmp/hash.txt
 
