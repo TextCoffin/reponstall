@@ -1,5 +1,5 @@
 #!/bin/bash 
-# script ver 1.2br
+# script ver 1.4br
 
 #check directory
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
@@ -12,7 +12,6 @@ else
 fi
 
 export INSTALL_OPTIONAL_PKGS
-export INSTALL_GUI
 
 
 if [ -f /etc/os-release ]; then 
