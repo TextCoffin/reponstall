@@ -4,21 +4,32 @@
 #check directory
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
+if [ -f "$SCRIPT_DIR/install.sh" ]; then
+	source "$SCRIPT_DIR/install.sh"
+else
+	echo "error - install.sh not found"
+	exit 1
+fi
+
+export INSTALL_OPTIONAL_PKGS
+export INSTALL_GUI
+
+
 if [ -f /etc/os-release ]; then 
 	source /etc/os-release #импорт переменных
         
 	case "$ID" in #переменая содержит короткое название дистро
                 ubuntu|debian)
                 echo "starting debian installation"
-		bash "$SCRIPT_DIR/debian-install.sh"
+		bash "$SCRIPT_DIR/packages/debian_install.sh"
                 ;;
         	arch)
                 echo "starting arch installation"
-		bash "$SCRIPT_DIR/arch_stall.sh"
+		bash "$SCRIPT_DIR/packages/arch_stall.sh"
                 ;;
 		opensuse*|suse)
 		echo "starting opensuse installation"
-		bash "$SCRIPT_DIR/opensuse_stall.sh"
+		bash "$SCRIPT_DIR/packages/opensuse_stall.sh"
 		;;
 	*)
 		

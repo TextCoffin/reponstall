@@ -79,12 +79,12 @@ git clone https://codeberg.org/wh1tepearl/vcompmgr.git
 cd vcompmgr/
 make
 sudo make install
-sudo pacman -S  bc
-	
+
+INSTALL_OPTIONAL_PKGS="yes"
 	echo "vcompmgr installed!"
 	;;
 	[nN]* | "")
-	echo "N (recomended)" || exit 1
+	echo "N (recomended)" || INSTALL_OPTIONAL_PKGS="no" || exit 1
 	;;
 	* )
 	echo "invalid type"
@@ -93,8 +93,7 @@ sudo pacman -S  bc
 esac
 
 
-#INSTALLING
-#program for work keybinds
-sudo pacman -S dmenu xclip maim playerctl kitty wmctrl xdotool imagemagick
+#yeah
 
 echo "SUCCESS"
+
